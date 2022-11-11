@@ -1,1 +1,1 @@
-# -fixedsupplyERC20-truffle
+# fixedsupplyERC20-truffle
