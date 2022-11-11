@@ -1,6 +1,7 @@
 require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const API_KEY = process.env.API_KEY;
 module.exports = {
     networks: {
       development: {
@@ -35,5 +36,13 @@ module.exports = {
           },
         },
       },
-    }
+    },
+    plugins: [
+        'truffle-contract-size',
+        'truffle-plugin-verify'
+      ],
+      api_keys: {
+        ftmscan: API_KEY,
+        testnet_ftmscan: API_KEY
+      }
   };
