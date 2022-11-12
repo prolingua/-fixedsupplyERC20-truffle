@@ -5,7 +5,7 @@ const {
   } = require('@openzeppelin/test-helpers');
 const web3 = require('web3');
 const etherToWei = (n) => {
-    return new web3.utils.BN(web3.utils.toWei(n.toString(), 'ether'));
+    return web3.utils.toWei(n.toString(), 'ether');
   };
 const TOTAL_SUPPLY = etherToWei(1000_000);
 const GoldToken = artifacts.require('GoldToken');
